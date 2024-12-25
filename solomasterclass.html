@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fortnite Solo Masterclass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #1e90ff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            height: auto;
+            position: relative;
+        }
+
+        header .logo img {
+            max-width: 350px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        /* QRD Text Styling */
+        .qrd-text {
+            font-family: 'Lacquer', sans-serif;
+            font-size: 10rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            top: -6%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Textschatten für bessere Lesbarkeit */
+            z-index: 10;
+            opacity: 0.4;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://wallpapercave.com/wp/wp8731864.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            height: 100vh;
+        }
+
+        /* Verbesserte Lesbarkeit des Textes */
+        .hero h1 {
+            font-size: 3rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für bessere Sichtbarkeit */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Textschatten für bessere Lesbarkeit */
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund für bessere Sichtbarkeit */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Textschatten für bessere Lesbarkeit */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Password Modal */
+        #password-modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+        }
+
+        .modal-content input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 80%;
+        }
+
+        .modal-content button {
+            background-color: #1e90ff;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Hide content until password is correct */
+        .blurred-background {
+            filter: blur(5px);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Passwortabfrage Modal -->
+    <div id="password-modal">
+        <div class="modal-content">
+            <h2>Gib das Passwort ein, um fortzufahren</h2>
+            <input type="password" id="password" placeholder="Passwort eingeben">
+            <button onclick="checkPassword()">Zugriff gewähren</button>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header id="main-header" class="blurred-background">
+        <div class="container">
+            <div class="logo">
+                <!-- Logo hier einfügen -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Über die Masterclass</a></li>
+                    <li><a href="#courses">Kursinhalte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- QRD Text -->
+    <div class="qrd-text">
+        QRD
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero blurred-background">
+        <div class="container">
+            <h1>Werde ein Fortnite Solo-Profi!</h1>
+            <p>Lerne die besten Strategien und Tipps, um im Solo-Modus zu gewinnen.</p>
+        </div>
+    </section>
+
+    <!-- Über die Masterclass Section -->
+    <section id="about" class="about blurred-background">
+        <div class="container">
+            <h2>Über die Masterclass</h2>
+            <p>In dieser Masterclass lernst du, wie du im Solo-Modus von Fortnite immer besser wirst. Wir helfen dir, deine Fähigkeiten zu verbessern, damit du die besten Strategien anwenden kannst, um im Spiel zu gewinnen.</p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/cYCVG1T_Dls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Kursinhalte Section -->
+    <section id="courses" class="courses blurred-background">
+        <div class="container">
+            <h2>Was du lernen wirst</h2>
+            <ul>
+                <li><strong>Die Grundlagen des Spiels:</strong> Du lernst, wie du dich schnell in jeder Runde zurechtfindest und die Karte richtig nutzt.</li>
+                <li><strong>Waffen und Ressourcen effektiv nutzen:</strong> Wann und wie du die besten Waffen einsetzt und wie du deine Ressourcen gut verwaltest.</li>
+                <li><strong>Schlachten richtig angehen:</strong> Tipps, wie du Gegner besiegst, ohne unnötige Risiken einzugehen.</li>
+                <li><strong>Bautechniken:</strong> Die wichtigsten Bau-Techniken, um dich schnell zu verteidigen und Vorteile zu gewinnen.</li>
+                <li><strong>Endgame-Tipps:</strong> Wie du das Spiel im letzten Kreis gewinnst und dabei ruhig bleibst.</li>
+                <li><strong>Fehleranalyse:</strong> Wie du deine Fehler erkennst und dich ständig verbesserst.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Besondere Tipps für den 25. Dezember 2024 Section -->
+    <section id="tips" class="tips blurred-background">
+        <div class="container">
+            <h2>Masterclass vom 25. Dezember 2024</h2>
+            <p>In dieser Masterclass kannst du deine Solo-Fähigkeiten auf das nächste Level bringen! Hier sind einige einfache Tipps, die dir helfen, besser zu werden:</p>
+            <ul>
+                <li><strong>Spiele regelmäßig:</strong> Übung macht den Meister. Verbringe an diesem Tag viel Zeit im Spiel, um deine Reflexe zu verbessern.</li>
+                <li><strong>Probiere neue Taktiken aus:</strong> Experimentiere mit verschiedenen Strategien, um herauszufinden, was für dich am besten funktioniert.</li>
+                <li><strong>Nutze Ressourcen richtig:</strong> Lerne, wie du deine Ressourcen effektiv verwaltest, um immer genug zu haben, wenn es darauf ankommt.</li>
+                <li><strong>Vermeide unnötige Kämpfe:</strong> Du musst nicht immer kämpfen. Manchmal ist es besser, ruhig zu bleiben und auf den richtigen Moment zu warten.</li>
+                <li><strong>Reflektiere dein Spiel:</strong> Denk nach, was gut lief und was du verbessern kannst. So wirst du jedes Mal besser.</li>
+            </ul>
+            <p>Nutze diese Masterclass, um deine Fähigkeiten zu verbessern und deinen Weg zum Fortnite-Profi zu starten!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fortnite Solo Masterclass. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = '12345'; // Passwort ist jetzt '12345'
+
+            if (password === correctPassword) {
+                document.getElementById('password-modal').style.display = 'none';
+                document.body.classList.remove('blurred-background'); // Entfernt den "Blur"-Effekt
+                document.getElementById('main-header').classList.remove('blurred-background'); // Entfernt den Blur-Effekt vom Header
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('blurred-background'); // Entfernt den Blur-Effekt von allen Sektionen
+                });
+            } else {
+                alert('Falsches Passwort. Bitte versuche es erneut.');
+            }
+        }
+
+        window.onload = function() {
+            document.getElementById('password-modal').style.display = 'flex';
+        };
+    </script>
+
+</body>
+</html>
